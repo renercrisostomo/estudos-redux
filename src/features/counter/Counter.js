@@ -61,19 +61,19 @@ export function Counter() {
         </button>
         <button
           className={styles.button}
-          onClick={() => dispatch(divideByAmount())}
+          onClick={() => dispatch(divideByAmount(incrementValue))}
         >
           / {incrementAmount}
         </button>
         <button
           className={styles.button}
-          onClick={() => dispatch(multiplyByAmount())}
+          onClick={() => dispatch(multiplyByAmount(incrementValue))}
         >
           * {incrementAmount}
         </button>
         <button
           className={styles.button}
-          onClick={() => dispatch(set(incrementAmount))}
+          onClick={() => dispatch(set(incrementValue))}
         >
           {incrementAmount}
         </button>
