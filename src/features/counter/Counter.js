@@ -16,9 +16,9 @@ import styles from './Counter.module.css';
 export function Counter() {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
-  const [incrementAmount, setIncrementAmount] = useState('2');
+  const [Amount, setAmount] = useState('2');
 
-  const incrementValue = Number(incrementAmount) || 0;
+  const amountValue = Number(Amount) || 0;
 
   return (
     <div>
@@ -44,38 +44,38 @@ export function Counter() {
           type='number'
           className={styles.textbox}
           aria-label="Set increment amount"
-          value={incrementAmount}
-          onChange={(e) => setIncrementAmount((e.target.value))}
+          value={Amount}
+          onChange={(e) => setAmount((e.target.value))}
         />
         <button
           className={styles.button}
-          onClick={() => dispatch(incrementByAmount(incrementValue))}
+          onClick={() => dispatch(incrementByAmount(amountValue))}
         >
-          + {incrementAmount}
+          + {Amount}
         </button>
         <button
           className={styles.button}
-          onClick={() => dispatch(decrementByAmount(incrementValue))}
+          onClick={() => dispatch(decrementByAmount(amountValue))}
         >
-          - {incrementAmount}
+          - {Amount}
         </button>
         <button
           className={styles.button}
-          onClick={() => dispatch(divideByAmount(incrementValue))}
+          onClick={() => dispatch(divideByAmount(amountValue))}
         >
-          / {incrementAmount}
+          / {Amount}
         </button>
         <button
           className={styles.button}
-          onClick={() => dispatch(multiplyByAmount(incrementValue))}
+          onClick={() => dispatch(multiplyByAmount(amountValue))}
         >
-          * {incrementAmount}
+          * {Amount}
         </button>
         <button
           className={styles.button}
-          onClick={() => dispatch(set(incrementValue))}
+          onClick={() => dispatch(set(amountValue))}
         >
-          {incrementAmount}
+          {Amount}
         </button>
         <button
           className={styles.button}
